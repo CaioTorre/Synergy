@@ -14,6 +14,6 @@ while true
 	for j in (0..(ans.length-1))
 		res += ans[j]
 	end
-	puts " (= " + res.to_s + " )"
+	puts " (= " + res.to_s + " ) or " + ans.join() + " (concat)"
 	puts "-----"
 end
