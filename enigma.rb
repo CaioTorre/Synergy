@@ -1,3 +1,58 @@
+#Welcome to the (incomplete) enigma simulator
+#In its current state, the machine is capable
+#of doing almost everything its real-life 
+#counterpart can do (except for the plugboard
+#function)
+#=============================================
+#The supported commands are
+#-Over
+#--Completely resets the machine, keeping only
+#--the "savedOutputs" array
+#---------------------------------------------
+#-Space
+#--Adds a space in the result array and a dash
+#--in the printSpacer array
+#---------------------------------------------
+#-Print
+#--Prints the current contents of the result
+#--array, between two lines (printSpacers)
+#---------------------------------------------
+#-Clear
+#--Clears both result and printSpacer, keeping
+#--whatever is written or saved in the arrays
+#---------------------------------------------
+#-Write
+#--Pushes the current result array into the
+#--start of the writtenOutputs array
+#---------------------------------------------
+#-Save
+#--Pushes the current result array into the 
+#--start of the savedOutputs array (which isn't
+#--erased with "Over")
+#---------------------------------------------
+#-Output written
+#--Prints out the contents of the writtenOutputs
+#--array
+#---------------------------------------------
+#-Output saved
+#--Prints out the contents of the savedOutputs
+#--array
+#---------------------------------------------
+#-Clear written
+#--Erases the contents of writtenOutputs
+#---------------------------------------------
+#-Clear saved
+#--Erases the contents of savedOutputs
+#=============================================
+#In case it receives a single letter, the 
+#machine will try to use it as a parameter,
+#effectively converting it to another (based
+#on its current settings), and rotating the 
+#wheels. Because of the way the rotors move,
+#it's hard to predict how they'll end up after
+#a command is given, so there's no "undo" 
+#command (as of yet)
+
 def waitForSafeInput num, message
 	isOk = false
 	while !isOk
