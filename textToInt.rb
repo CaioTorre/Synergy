@@ -14,6 +14,11 @@ while true
 	for j in (0..(ans.length-1))
 		res += ans[j]
 	end
-	puts " (= " + res.to_s + " ) or " + ans.join() + " (concat)"
+	print " (= " + res.to_s + " ) or " + ans.join() + " (concat)"
+summed = 0
+for k in (0..(ans.length-1))
+summed += ans[ans.length-(1+k)]*(10**k)
+end
+puts " or " + summed.to_s
 	puts "-----"
 end
